@@ -1,0 +1,26 @@
+:root {
+  // Font
+
+  --ff-base: "Inter", sans-serif;
+
+  --fw-thin: 100;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  // Colors
+
+  --clr-black: #212121;
+  --clr-grey: #80808080;
+  --clr-white: #eee;
+
+  --clr-primary-50: hsl(345, 100%, 90%);
+  --clr-primary-100: hsl(345, 100%, 80%);
+  --clr-primary-200: hsl(345, 100%, 73%);
+  --clr-primary-300: hsl(345, 100%, 67%);
+  --clr-primary-400: hsl(345, 100%, 61%);
+  --clr-primary-500: hsl(345, 100%, 55%);
+  --clr-primary-600: hsl(345, 100%, 47%);
+  --clr-primary-700: hsl(345, 100%, 40%);
+  --clr-primary-800: hsl(345, 100%, 33%);
+  --clr-primary-900: hsl(345, 100%, 26%);
+}
