@@ -18,11 +18,30 @@ li {
   list-style: none;
 }
 
+img,
+svg {
+  display: block;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--clr-primary-300);
+  outline: none;
+  color: var(--clr-primary-50);
+  font-family: var(--ff-base);
 }
 
 button {
   border: none;
   font-family: var(--ff-base);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: var(--radius);
 }
