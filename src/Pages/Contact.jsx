@@ -18,6 +18,7 @@ function Contact() {
             name=""
             id="contact-name"
             className="contact-input"
+            autoComplete="off"
             required
             placeholder="Your name"
           />
@@ -26,6 +27,7 @@ function Contact() {
             name=""
             id="contact-email"
             className="contact-input"
+            autoComplete="off"
             required
             placeholder="Your email "
           />
@@ -35,6 +37,7 @@ function Contact() {
             className="contact-input"
             cols="30"
             rows="5"
+            autoComplete="off"
             required
             placeholder="Your message "
           ></textarea>
