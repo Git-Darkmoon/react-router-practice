@@ -4,7 +4,7 @@ function Contact() {
   return (
     <main className="container">
       <picture className="img-content">
-        <img src={logo} alt="" />
+        <img src={logo} id="contact-img" alt="" />
       </picture>
       <div className="text-content">
         <h2 className="title">Contact Us</h2>
@@ -17,6 +17,7 @@ function Contact() {
             type="text"
             name=""
             id="contact-name"
+            className="contact-input"
             required
             placeholder="Your name"
           />
@@ -24,18 +25,22 @@ function Contact() {
             type="email"
             name=""
             id="contact-email"
+            className="contact-input"
             required
             placeholder="Your email "
           />
           <textarea
             name=""
             id="contact-msg"
+            className="contact-input"
             cols="30"
             rows="5"
             required
             placeholder="Your message "
           ></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit" className="contact-btn">
+            Submit
+          </button>
         </form>
       </div>
     </main>
