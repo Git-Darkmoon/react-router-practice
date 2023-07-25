@@ -9,7 +9,7 @@
 
   // Colors
 
-  --clr-black: #212121;
+  --clr-black: #111013;
   --clr-grey: #80808080;
   --clr-white: #eee;
 
@@ -23,4 +23,7 @@
   --clr-primary-700: hsl(345, 100%, 40%);
   --clr-primary-800: hsl(345, 100%, 33%);
   --clr-primary-900: hsl(345, 100%, 26%);
+
+  --navbar-height: 5rem;
+  --transition: all 0.3s ease-in-out;
 }
