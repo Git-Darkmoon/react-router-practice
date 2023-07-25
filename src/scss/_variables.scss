@@ -18,12 +18,16 @@
   --clr-primary-200: hsl(345, 100%, 73%);
   --clr-primary-300: hsl(345, 100%, 67%);
   --clr-primary-400: hsl(345, 100%, 61%);
-  --clr-primary-500: hsl(345, 100%, 55%);
+  --clr-primary-500: hsl(345, 100%, 55%); /* #ff1a53 */
   --clr-primary-600: hsl(345, 100%, 47%);
   --clr-primary-700: hsl(345, 100%, 40%);
   --clr-primary-800: hsl(345, 100%, 33%);
   --clr-primary-900: hsl(345, 100%, 26%);
 
   --navbar-height: 5rem;
+  --pd-x: 3.5rem;
+
   --transition: all 0.3s ease-in-out;
+
+  --radius: 0.25rem;
 }
