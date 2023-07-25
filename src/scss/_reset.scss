@@ -12,6 +12,7 @@
   -webkit-text-size-adjust: 100%;
 
   font-family: var(--ff-base);
+  user-select: none;
 }
 
 li {
@@ -34,8 +35,14 @@ textarea {
   border: none;
   border-bottom: 3px solid var(--clr-primary-300);
   outline: none;
-  color: var(--clr-primary-50);
+  color: var(--clr-white);
+
   font-family: var(--ff-base);
+
+  &:focus {
+    border-bottom: 3px solid var(--clr-primary-500);
+    color: var(--clr-primary-50);
+  }
 }
 
 button {
