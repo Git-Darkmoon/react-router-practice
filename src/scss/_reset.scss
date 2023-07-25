@@ -38,6 +38,7 @@ textarea {
   color: var(--clr-white);
 
   font-family: var(--ff-base);
+  transition: var(--transition);
 
   &:focus {
     border-bottom: 3px solid var(--clr-primary-500);
@@ -52,4 +53,5 @@ button {
   padding-inline: 1rem;
   border-radius: var(--radius);
   cursor: pointer;
+  transition: var(--transition);
 }
