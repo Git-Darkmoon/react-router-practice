@@ -7,32 +7,18 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  width: 100vw;
-  height: calc(100dvh - var(--navbar-height));
-
-  display: grid;
-  place-items: center;
-
-  h2 {
-    font-size: 5vmax;
-    color: var(--clr-white);
-    text-balance: wrap;
-  }
-}
-
 .navbar {
   width: 100vw;
   height: var(--navbar-height);
   @include mixins.flexCenter();
   justify-content: end;
 
-  padding-inline: 5rem;
+  padding-inline: var(--pd-x);
   gap: 3rem;
 
   .link {
     color: var(--clr-primary-200);
-    font-size: 1.35vmax;
+    font-size: large;
     transition: var(--transition);
 
     &:hover {
@@ -43,5 +29,58 @@ body {
   .active {
     text-decoration: 2px underline var(--clr-primary-200);
     text-underline-position: under;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: calc(100dvh - var(--navbar-height));
+  padding-inline: var(--pd-x);
+  @include mixins.flexCenter(column);
+  gap: 1.5rem;
+
+  .text-content {
+    text-balance: wrap;
+
+    .title {
+      color: var(--clr-primary-400);
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+
+    .desc {
+      color: var(--clr-white);
+      line-height: 1.5;
+    }
+  }
+  .img-content {
+    img {
+      max-width: 25rem;
+    }
+  }
+}
+
+@media (width >= 48rem) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+    .text-content {
+      max-width: 55ch;
+
+      .title {
+        font-size: 3rem;
+      }
+
+      .desc {
+        font-size: 1.25rem;
+      }
+    }
+    .img-content {
+      img {
+        max-height: 60vh;
+        min-width: 25rem;
+      }
+    }
   }
 }
