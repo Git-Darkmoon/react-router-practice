@@ -4,7 +4,7 @@ function Home() {
   return (
     <main className="container">
       <div className="text-content">
-        <h2 className="title">This is the home page</h2>
+        <h2 className="title">Movies Home</h2>
         <p className="desc">
           Lights, Camera, Entertainment! Dive into a world of movie magic with
           our web app. Discover, rate, and discuss the latest blockbusters and
