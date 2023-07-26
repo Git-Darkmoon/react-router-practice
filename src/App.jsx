@@ -3,6 +3,7 @@ import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Contact from "./Pages/Contact"
 import SharedLayout from "./components/SharedLayout"
+import Team from "./Pages/Team"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="team" element={<Team />} />
       </Route>
     </Routes>
   )
