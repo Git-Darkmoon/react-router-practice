@@ -18,7 +18,7 @@ body {
 
   .link {
     color: var(--clr-primary-200);
-    font-size: large;
+    font-size: var(--fs-0);
     transition: var(--transition);
 
     &:hover {
@@ -44,12 +44,13 @@ body {
 
     .title {
       color: var(--clr-primary-400);
-      font-size: 2rem;
+      font-size: var(--fs-4);
       line-height: 1.4;
     }
 
     .desc {
       color: var(--clr-white);
+      font-size: var(--fs-0);
       line-height: 1.5;
     }
   }
@@ -77,20 +78,55 @@ body {
   }
 
   .contact-input {
-    font-size: 1rem;
+    font-size: var(--fs-0);
     padding-block-end: 0.3rem;
   }
 
   .contact-btn {
     background-color: var(--clr-primary-300);
     color: var(--clr-white);
-    font-size: 1.25rem;
+    font-size: var(--fs-1);
     align-self: center;
 
     &:hover {
       background-color: var(--clr-primary-500);
     }
   }
+}
+
+.queryStatus {
+  color: var(--clr-primary-50);
+  font-size: var(--fs-4);
+}
+
+.usersContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.25rem;
+
+  .userCard {
+    @include mixins.flexCenter();
+    background-color: var(--clr-primary-500);
+    padding-block: 0.75rem;
+    padding-inline: 1.5rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--clr-primary-200);
+    }
+  }
+
+  .userName {
+    font-size: var(--fs-0);
+    color: var(--clr-primary-50);
+  }
+}
+
+#usersImg {
+  height: 30vh;
 }
 
 // styling for screens bigger than 768px.
@@ -100,14 +136,6 @@ body {
     justify-content: space-around;
     .text-content {
       max-width: 55ch;
-
-      .title {
-        font-size: 3rem;
-      }
-
-      .desc {
-        font-size: 1.25rem;
-      }
     }
     .img-content {
       img {
@@ -119,5 +147,9 @@ body {
 
   #contact-img {
     max-height: 25rem;
+  }
+
+  #usersImg {
+    height: auto;
   }
 }
