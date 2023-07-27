@@ -10,8 +10,6 @@ function User() {
     return user.id === parseInt(userId)
   })
 
-  console.log(allUsers)
-
   const { name, username, email, address, phone, company } = actualUser
 
   return (
