@@ -5,10 +5,11 @@
 body {
   background-color: var(--clr-black);
   overflow-x: hidden;
+  padding-inline: var(--pd-x);
 }
 
 .navbar {
-  width: 100vw;
+  width: calc(100vw - var(--pd-x));
   height: var(--navbar-height);
   @include mixins.flexCenter();
   justify-content: end;
@@ -33,7 +34,8 @@ body {
 }
 
 .container {
-  width: 100vw;
+  width: calc(100vw - var(--pd-x));
+
   height: calc(100dvh - var(--navbar-height));
   padding-inline: var(--pd-x);
   @include mixins.flexCenter(column);
@@ -95,6 +97,10 @@ body {
 }
 
 .queryStatus {
+  width: 100vw;
+  height: calc(100dvh - var(--navbar-height));
+  @include mixins.flexCenter();
+
   color: var(--clr-primary-50);
   font-size: var(--fs-4);
 }
@@ -127,6 +133,42 @@ body {
 
 #usersImg {
   height: 30vh;
+}
+
+.infoCard {
+  width: 100%;
+  height: 80dvh;
+
+  padding: 1rem;
+
+  background-color: transparent;
+
+  box-shadow: 0 0 12px var(--clr-primary-400);
+  border-radius: var(--radius);
+
+  color: var(--clr-white);
+
+  .infoCard__header {
+    @include mixins.flexCenter();
+    border-bottom: 1px solid var(--clr-primary-300);
+    padding-block-end: 1rem;
+
+    img {
+      width: 20vmax;
+    }
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+
+    .label {
+      color: var(--clr-primary-200);
+    }
+  }
 }
 
 // styling for screens bigger than 768px.
