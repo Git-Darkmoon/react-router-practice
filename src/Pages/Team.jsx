@@ -1,17 +1,9 @@
-import { useQuery } from "@tanstack/react-query"
 import logo from "../assets/people_undraw.svg"
+import { Link } from "react-router-dom"
+import { useGlobalContext } from "../context"
 
 function Team() {
-  const API_URL = "https://jsonplaceholder.typicode.com/users"
-
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      const response = await fetch(API_URL)
-      const info = await response.json()
-      return info
-    },
-  })
+  const { allUsers, isLoading, isError } = useGlobalContext()
 
   if (isError) {
     return (
@@ -29,17 +21,17 @@ function Team() {
     )
   }
 
-  const allUsers = data
-
   return (
     <main className="container">
       <section className="usersContainer">
         {allUsers.map((user) => {
-          const { id, name, username, email } = user
+          const { id, name } = user
           return (
-            <article className="userCard" key={id}>
-              <h2 className="userName">{name}</h2>
-            </article>
+            <Link to={`/team/${id}`} key={id}>
+              <article className="userCard">
+                <h2 className="userName">{name}</h2>
+              </article>
+            </Link>
           )
         })}
       </section>
